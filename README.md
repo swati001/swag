@@ -1,4 +1,30 @@
-# Spring Boot + Actuator + Prometheus
+---
+description: Created this readMe by using Gitbook app.
+---
+
+# Spring Boot + swagger + Actuator + Prometheus
+
+## Spring Boot 2.x and Swagger
+
+Swagger provides a very nice and clean documentation representation of your APIs developed. This helps business people to get to know all your API endpints and their relevant request and response details to be required by the endpoints. 
+
+We need to simply add the dependency of swagger from springfox in your project:
+
+```
+$ Include the dependency of swagger in pom/gradle,
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger2</artifactId>
+	<version>2.9.2</version>
+</dependency>
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger-ui</artifactId>
+	<version>2.9.2</version>
+</dependency>
+```
+
+
 
 ## Spring Boot 2.x and Actuator 
 
@@ -16,7 +42,11 @@ $ Include the dependency of actuator in pom/gradle,
 
 Add these lines in your application.properties:
 
+
+
 {% hint style="info" %}
+
+
 management.endpoints.web.exposure.include=\*
 
 management.endpoint.metrics.enabled=true
@@ -43,6 +73,8 @@ $ Include the dependency of actuator in pom/gradle,
 Add these lines in your application.properties:
 
 {% hint style="info" %}
+
+
 management.endpoints.prometheus.enabled=true
 
 management.metrics.export.prometheus.enabled=true
