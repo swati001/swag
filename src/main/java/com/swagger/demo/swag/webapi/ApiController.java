@@ -24,6 +24,7 @@ public class ApiController {
     })
 	@RequestMapping(value = "/getListApi", method = RequestMethod.GET)
 	public ResponseEntity custom() {
+		
 	    return new ResponseEntity("hey list api", HttpStatus.OK);
 	}
 	
